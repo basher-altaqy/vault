@@ -30,7 +30,7 @@ date: 2026-09-07
 
 ## الأفكار المفتوحة
 <!-- vault:list type=idea project=thamara status=raw,planned limit=10 -->
-- (لا شيء بعد)
+- 2026-09-07 · [[I-001-telegram-voice-notes|دعم الرسائل الصوتية في تيليغرام]] · planned
 <!-- /vault:list -->
 
 ## المقترحات
