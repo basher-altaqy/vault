@@ -27,7 +27,7 @@ generated: true
 | status | enum | نعم | قيد المراجعة/قيد المعالجة/تم الحل |
 
 ## الروابط
-- relation: [[E-user|حساب]] → [[E-ticket|بطاقة دعم]]
+- relation: [[E-user|حساب]] → [[E-ticket|بطاقة دعم]] (يطلب دعماً)
 
 ## الشاشات
 - [[S-ticket-create|بطاقة دعم]]

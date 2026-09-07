@@ -25,9 +25,9 @@ generated: true
 | coverage_areas | json | نعم |  |
 
 ## الروابط
-- relation: [[E-user|حساب]] → [[E-transporter|ناقل]]
-- relation: [[E-transporter|ناقل]] → [[E-shipment|شحنة]]
-- relation: [[E-transporter|ناقل]] → [[E-vehicle|مركبة]]
+- relation: [[E-user|حساب]] → [[E-transporter|ناقل]] (ملف ناقل)
+- relation: [[E-transporter|ناقل]] → [[E-shipment|شحنة]] (ينقل)
+- relation: [[E-transporter|ناقل]] → [[E-vehicle|مركبة]] (مركبات)
 
 ## الشاشات
 - [[S-transporter-register|بيانات الناقل]]

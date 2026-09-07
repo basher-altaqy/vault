@@ -26,7 +26,7 @@ generated: true
 | source | string | نعم |  |
 
 ## الروابط
-- relation: [[E-product|منتج (صنف)]] → [[E-price-limit|حد سعر]]
+- relation: [[E-product|منتج (صنف)]] → [[E-price-limit|حد سعر]] (حد سعر)
 
 ## الشاشات
 - [[S-admin-price-limits|حدود الأسعار (الوزارة)]]

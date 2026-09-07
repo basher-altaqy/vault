@@ -29,7 +29,7 @@ generated: true
 | status | enum | نعم |  |
 
 ## الروابط
-- relation: [[E-user|حساب]] → [[E-report|بلاغ]]
+- relation: [[E-user|حساب]] → [[E-report|بلاغ]] (يبلّغ)
 
 ## الشاشات
 - [[S-report-create|تقديم بلاغ]]

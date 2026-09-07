@@ -32,14 +32,14 @@ generated: true
 
 ## الروابط
 - relation: [[E-user|حساب]] → [[E-role|دور]] (أدوار)
-- relation: [[E-user|حساب]] → [[E-farmer|مزارع]]
-- relation: [[E-user|حساب]] → [[E-trader|تاجر]]
-- relation: [[E-user|حساب]] → [[E-transporter|ناقل]]
-- relation: [[E-user|حساب]] → [[E-officer|موظف حكومي]]
-- relation: [[E-user|حساب]] → [[E-report|بلاغ]]
-- relation: [[E-user|حساب]] → [[E-ticket|بطاقة دعم]]
-- relation: [[E-user|حساب]] → [[E-blacklist|قائمة سوداء]]
-- relation: [[E-user|حساب]] → [[E-notification|إشعار]]
+- relation: [[E-user|حساب]] → [[E-farmer|مزارع]] (ملف مزارع)
+- relation: [[E-user|حساب]] → [[E-trader|تاجر]] (ملف تاجر)
+- relation: [[E-user|حساب]] → [[E-transporter|ناقل]] (ملف ناقل)
+- relation: [[E-user|حساب]] → [[E-officer|موظف حكومي]] (ملف موظف)
+- relation: [[E-user|حساب]] → [[E-report|بلاغ]] (يبلّغ)
+- relation: [[E-user|حساب]] → [[E-ticket|بطاقة دعم]] (يطلب دعماً)
+- relation: [[E-user|حساب]] → [[E-blacklist|قائمة سوداء]] (قد يُحظر)
+- relation: [[E-user|حساب]] → [[E-notification|إشعار]] (يتلقى إشعارات)
 
 ## الشاشات
 - [[S-register|التسجيل واختيار الدور]]

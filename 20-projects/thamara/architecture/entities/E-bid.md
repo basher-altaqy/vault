@@ -27,8 +27,8 @@ generated: true
 | placed_at | datetime | نعم |  |
 
 ## الروابط
-- relation: [[E-auction|مزاد مفتوح]] → [[E-bid|مزايدة]]
-- relation: [[E-trader|تاجر]] → [[E-bid|مزايدة]]
+- relation: [[E-auction|مزاد مفتوح]] → [[E-bid|مزايدة]] (مزايدات)
+- relation: [[E-trader|تاجر]] → [[E-bid|مزايدة]] (يزايد)
 
 ## الشاشات
 - [[S-trader-auction-view|صفحة المزاد والمزايدة]]

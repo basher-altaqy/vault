@@ -25,7 +25,7 @@ generated: true
 | permissions | json | نعم |  |
 
 ## الروابط
-- relation: [[E-user|حساب]] → [[E-officer|موظف حكومي]]
+- relation: [[E-user|حساب]] → [[E-officer|موظف حكومي]] (ملف موظف)
 
 ## الشاشات
 - [[S-admin-users|المستخدمون والتوثيق]]

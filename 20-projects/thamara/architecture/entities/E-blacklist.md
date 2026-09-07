@@ -25,7 +25,7 @@ generated: true
 | since | date | نعم |  |
 
 ## الروابط
-- relation: [[E-user|حساب]] → [[E-blacklist|قائمة سوداء]]
+- relation: [[E-user|حساب]] → [[E-blacklist|قائمة سوداء]] (قد يُحظر)
 
 ## الشاشات
 - [[S-admin-blacklist|القائمة السوداء]]

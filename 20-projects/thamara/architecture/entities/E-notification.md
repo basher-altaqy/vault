@@ -25,7 +25,7 @@ generated: true
 | read_at | datetime | لا |  |
 
 ## الروابط
-- relation: [[E-user|حساب]] → [[E-notification|إشعار]]
+- relation: [[E-user|حساب]] → [[E-notification|إشعار]] (يتلقى إشعارات)
 
 ## الشاشات
 - [[S-notifications|الإشعارات]]

@@ -25,8 +25,8 @@ generated: true
 | quality_grades | json | نعم |  |
 
 ## الروابط
-- relation: [[E-product|منتج (صنف)]] → [[E-crop|محصول]]
-- relation: [[E-product|منتج (صنف)]] → [[E-price-limit|حد سعر]]
+- relation: [[E-product|منتج (صنف)]] → [[E-crop|محصول]] (صنف المحصول)
+- relation: [[E-product|منتج (صنف)]] → [[E-price-limit|حد سعر]] (حد سعر)
 
 ## الشاشات
 - [[S-admin-catalog|الكتالوج والأصناف]]

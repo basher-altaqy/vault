@@ -29,8 +29,8 @@ generated: true
 | status | enum | نعم |  |
 
 ## الروابط
-- relation: [[E-trader|تاجر]] → [[E-tender|مناقصة مغلقة]]
-- relation: [[E-tender|مناقصة مغلقة]] → [[E-offer|عرض على مناقصة]]
+- relation: [[E-trader|تاجر]] → [[E-tender|مناقصة مغلقة]] (يطرح مناقصة)
+- relation: [[E-tender|مناقصة مغلقة]] → [[E-offer|عرض على مناقصة]] (تتلقى عروضاً)
 - shows: [[S-farmer-tender-browse|المناقصات المفتوحة]] → [[E-tender|مناقصة مغلقة]]
 
 ## الشاشات

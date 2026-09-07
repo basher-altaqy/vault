@@ -27,8 +27,8 @@ generated: true
 | price_limit_id | ref | لا | حد الوزارة المطبّق |
 
 ## الروابط
-- relation: [[E-crop|محصول]] → [[E-listing|عرض بيع]]
-- relation: [[E-listing|عرض بيع]] → [[E-auction|مزاد مفتوح]]
+- relation: [[E-crop|محصول]] → [[E-listing|عرض بيع]] (يُعرض في)
+- relation: [[E-listing|عرض بيع]] → [[E-auction|مزاد مفتوح]] (مزاد)
 - shows: [[S-trader-market|السوق (العروض)]] → [[E-listing|عرض بيع]]
 
 ## الشاشات

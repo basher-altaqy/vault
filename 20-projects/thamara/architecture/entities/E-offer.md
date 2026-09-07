@@ -28,8 +28,8 @@ generated: true
 | status | enum | نعم |  |
 
 ## الروابط
-- relation: [[E-tender|مناقصة مغلقة]] → [[E-offer|عرض على مناقصة]]
-- relation: [[E-farmer|مزارع]] → [[E-offer|عرض على مناقصة]]
+- relation: [[E-tender|مناقصة مغلقة]] → [[E-offer|عرض على مناقصة]] (تتلقى عروضاً)
+- relation: [[E-farmer|مزارع]] → [[E-offer|عرض على مناقصة]] (يقدّم عرضاً)
 
 ## الشاشات
 - [[S-farmer-offer-submit|تقديم عرض على مناقصة]]

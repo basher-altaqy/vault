@@ -31,10 +31,10 @@ generated: true
 | balance | money | نعم | رصيد المزايدة |
 
 ## الروابط
-- relation: [[E-user|حساب]] → [[E-trader|تاجر]]
-- relation: [[E-trader|تاجر]] → [[E-bid|مزايدة]]
-- relation: [[E-trader|تاجر]] → [[E-tender|مناقصة مغلقة]]
-- relation: [[E-trader|تاجر]] → [[E-order|صفقة]]
+- relation: [[E-user|حساب]] → [[E-trader|تاجر]] (ملف تاجر)
+- relation: [[E-trader|تاجر]] → [[E-bid|مزايدة]] (يزايد)
+- relation: [[E-trader|تاجر]] → [[E-tender|مناقصة مغلقة]] (يطرح مناقصة)
+- relation: [[E-trader|تاجر]] → [[E-order|صفقة]] (يشتري)
 
 ## الشاشات
 - [[S-trader-register|بيانات المنشأة]]

@@ -27,7 +27,7 @@ generated: true
 | refrigerated | bool | لا |  |
 
 ## الروابط
-- relation: [[E-transporter|ناقل]] → [[E-vehicle|مركبة]]
+- relation: [[E-transporter|ناقل]] → [[E-vehicle|مركبة]] (مركبات)
 
 ## الشاشات
 - [[S-transporter-vehicles|مركباتي]]

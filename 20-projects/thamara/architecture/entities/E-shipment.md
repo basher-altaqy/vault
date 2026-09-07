@@ -26,8 +26,8 @@ generated: true
 | status | enum | نعم |  |
 
 ## الروابط
-- relation: [[E-order|صفقة]] → [[E-shipment|شحنة]]
-- relation: [[E-transporter|ناقل]] → [[E-shipment|شحنة]]
+- relation: [[E-order|صفقة]] → [[E-shipment|شحنة]] (تُشحن)
+- relation: [[E-transporter|ناقل]] → [[E-shipment|شحنة]] (ينقل)
 
 ## الشاشات
 - [[S-trader-transport-choose|اختيار الناقل]]

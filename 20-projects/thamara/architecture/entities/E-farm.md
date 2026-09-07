@@ -27,7 +27,7 @@ generated: true
 
 ## الروابط
 - relation: [[E-farmer|مزارع]] → [[E-farm|مزرعة]] (حيازات)
-- relation: [[E-farm|مزرعة]] → [[E-crop|محصول]]
+- relation: [[E-farm|مزرعة]] → [[E-crop|محصول]] (تُنتج)
 
 ## الشاشات
 - [[S-farmer-farms|مزارعي]]

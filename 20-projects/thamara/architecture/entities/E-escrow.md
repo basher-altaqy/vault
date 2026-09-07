@@ -27,7 +27,7 @@ generated: true
 | released_at | datetime | لا |  |
 
 ## الروابط
-- relation: [[E-order|صفقة]] → [[E-escrow|حساب ضمان]]
+- relation: [[E-order|صفقة]] → [[E-escrow|حساب ضمان]] (يُضمن بـ)
 - shows: [[S-admin-escrow|حسابات الضمان]] → [[E-escrow|حساب ضمان]]
 
 ## الشاشات

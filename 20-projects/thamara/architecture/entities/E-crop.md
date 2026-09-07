@@ -35,9 +35,9 @@ generated: true
 | supply_range | json | نعم |  |
 
 ## الروابط
-- relation: [[E-farm|مزرعة]] → [[E-crop|محصول]]
-- relation: [[E-product|منتج (صنف)]] → [[E-crop|محصول]]
-- relation: [[E-crop|محصول]] → [[E-listing|عرض بيع]]
+- relation: [[E-farm|مزرعة]] → [[E-crop|محصول]] (تُنتج)
+- relation: [[E-product|منتج (صنف)]] → [[E-crop|محصول]] (صنف المحصول)
+- relation: [[E-crop|محصول]] → [[E-listing|عرض بيع]] (يُعرض في)
 - shows: [[S-farmer-crops|محاصيلي]] → [[E-crop|محصول]]
 
 ## الشاشات

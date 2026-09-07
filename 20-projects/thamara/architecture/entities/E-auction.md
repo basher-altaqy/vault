@@ -29,8 +29,8 @@ generated: true
 | winner_bid_id | ref | لا |  |
 
 ## الروابط
-- relation: [[E-listing|عرض بيع]] → [[E-auction|مزاد مفتوح]]
-- relation: [[E-auction|مزاد مفتوح]] → [[E-bid|مزايدة]]
+- relation: [[E-listing|عرض بيع]] → [[E-auction|مزاد مفتوح]] (مزاد)
+- relation: [[E-auction|مزاد مفتوح]] → [[E-bid|مزايدة]] (مزايدات)
 - shows: [[S-trader-auction-view|صفحة المزاد والمزايدة]] → [[E-auction|مزاد مفتوح]]
 
 ## الشاشات

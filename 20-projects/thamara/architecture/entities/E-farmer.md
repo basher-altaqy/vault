@@ -24,10 +24,10 @@ generated: true
 | id_document | file | لا | لشارة حساب موثق |
 
 ## الروابط
-- relation: [[E-user|حساب]] → [[E-farmer|مزارع]]
+- relation: [[E-user|حساب]] → [[E-farmer|مزارع]] (ملف مزارع)
 - relation: [[E-farmer|مزارع]] → [[E-farm|مزرعة]] (حيازات)
-- relation: [[E-farmer|مزارع]] → [[E-offer|عرض على مناقصة]]
-- relation: [[E-farmer|مزارع]] → [[E-order|صفقة]]
+- relation: [[E-farmer|مزارع]] → [[E-offer|عرض على مناقصة]] (يقدّم عرضاً)
+- relation: [[E-farmer|مزارع]] → [[E-order|صفقة]] (يبيع)
 
 ## الشاشات
 - [[S-farmer-register|بيانات المزارع]]

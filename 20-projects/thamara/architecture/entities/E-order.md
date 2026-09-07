@@ -29,10 +29,10 @@ generated: true
 | status | enum | نعم | created | paid | shipped | received | delivered | released | disputed |
 
 ## الروابط
-- relation: [[E-trader|تاجر]] → [[E-order|صفقة]]
-- relation: [[E-farmer|مزارع]] → [[E-order|صفقة]]
-- relation: [[E-order|صفقة]] → [[E-escrow|حساب ضمان]]
-- relation: [[E-order|صفقة]] → [[E-shipment|شحنة]]
+- relation: [[E-trader|تاجر]] → [[E-order|صفقة]] (يشتري)
+- relation: [[E-farmer|مزارع]] → [[E-order|صفقة]] (يبيع)
+- relation: [[E-order|صفقة]] → [[E-escrow|حساب ضمان]] (يُضمن بـ)
+- relation: [[E-order|صفقة]] → [[E-shipment|شحنة]] (تُشحن)
 - shows: [[S-trader-orders|صفقاتي (تاجر)]] → [[E-order|صفقة]]
 
 ## الشاشات
