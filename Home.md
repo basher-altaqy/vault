@@ -9,12 +9,13 @@ date: 2026-09-07
 
 ## المشاريع
 <!-- vault:projects -->
+- [[20-projects/services-hub/index|الخدمات المساندة (طبقة الشركاء)]] · active
 - [[20-projects/thamara/index|ثمرة — سوق الهال الذكي]] · active
 <!-- /vault:projects -->
 
 ## بانتظار المراجعة
 <!-- vault:list status=pending limit=30 -->
-- (لا شيء بعد)
+- 2026-09-07 · [[Untitled|Untitled]] · pending
 <!-- /vault:list -->
 
 ## المساحات المشتركة

@@ -41,7 +41,7 @@ date: 2026-09-07
 
 ## بانتظار المراجعة
 <!-- vault:list project=thamara status=pending -->
-- (لا شيء بعد)
+- 2026-09-07 · [[Untitled|Untitled]] · pending
 <!-- /vault:list -->
 
 ## قواعد القراءة لجلسة الاستقبال

@@ -1,0 +1,175 @@
+// generated from model.json (services-hub)
+Table core-farmer {
+  id int [pk, increment]
+  core_id int [not null]
+  consents jsonb [not null] // لكل خدمة: مشاركة فردية أم مجمّعة
+  created_at timestamp
+}
+
+Table core-farm {
+  id int [pk, increment]
+  core_id int [not null]
+  governorate varchar [not null]
+  location point [not null]
+  created_at timestamp
+}
+
+Table core-crop {
+  id int [pk, increment]
+  core_id int [not null]
+  product varchar [not null]
+  season varchar
+  created_at timestamp
+}
+
+Table region {
+  id int [pk, increment]
+  governorate varchar [not null]
+  district varchar
+  climate_zone varchar
+  created_at timestamp
+}
+
+Table provider {
+  id int [pk, increment]
+  name varchar [not null]
+  kind varchar [not null] // inputs | lab | advisory | finance | insurance | logistics | other
+  license varchar
+  contract_ref varchar // عقد مشاركة البيانات
+  regions jsonb [not null]
+  status varchar [not null]
+  created_at timestamp
+}
+
+Table provider-user {
+  id int [pk, increment]
+  provider_id int [not null]
+  name varchar [not null]
+  role varchar [not null] // admin | agronomist | data-entry | sales
+  created_at timestamp
+}
+
+Table service {
+  id int [pk, increment]
+  provider_id int [not null]
+  title varchar [not null]
+  category varchar [not null] // seeds | fertilizer | pesticide | soil-test | water-test | product-test | advisory | finance | insurance
+  description text [not null]
+  input_schema jsonb [not null] // ما يُطلب من الفلاح عند الطلب
+  output_schema jsonb [not null] // ما تعيده الخدمة للفلاح
+  pricing jsonb
+  regions jsonb [not null]
+  status varchar [not null]
+  created_at timestamp
+}
+
+Table offering {
+  id int [pk, increment]
+  service_id int [not null]
+  name varchar [not null]
+  spec jsonb
+  price decimal
+  availability jsonb [not null] // بحسب المحافظة
+  suitable_products jsonb // المحاصيل المناسبة
+  created_at timestamp
+}
+
+Table service-request {
+  id int [pk, increment]
+  service_id int [not null]
+  farmer_id int [not null]
+  farm_id int
+  crop_id int
+  input jsonb [not null]
+  status varchar [not null] // new | accepted | in-progress | delivered | closed | cancelled
+  price decimal
+  created_at timestamp
+}
+
+Table farm-report {
+  id int [pk, increment]
+  farmer_id int [not null]
+  farm_id int
+  crop_id int
+  kind varchar [not null] // soil | water | product | photo | note
+  file varchar
+  values jsonb // قيم مستخرجة (pH، NPK…)
+  shared_with jsonb [not null] // الخدمات المسموح لها بالاطلاع
+  date date [not null]
+  created_at timestamp
+}
+
+Table feedback {
+  id int [pk, increment]
+  request_id int [not null]
+  farmer_id int [not null]
+  rating int [not null]
+  outcome jsonb // أثر الخدمة: إنتاجية، جودة، تكلفة
+  comment text
+  date date [not null]
+  created_at timestamp
+}
+
+Table region-dataset {
+  id int [pk, increment]
+  provider_id int [not null]
+  region_id int [not null]
+  product varchar // المحصول المعني إن وُجد
+  kind varchar [not null] // recommendation | schedule | alert | price | soil-profile
+  payload jsonb [not null]
+  valid_from date [not null]
+  valid_to date
+  created_at timestamp
+}
+
+Table insight {
+  id int [pk, increment]
+  farmer_id int [not null]
+  crop_id int
+  source_dataset_id int
+  source_report_id int
+  title varchar [not null]
+  body text [not null]
+  read_at timestamp
+  created_at timestamp
+}
+
+Table aggregate {
+  id int [pk, increment]
+  provider_id int [not null]
+  region_id int [not null]
+  period varchar [not null]
+  metrics jsonb [not null]
+  min_group_size int [not null] // لا يُعرض تجميع دون حد أدنى من الفلاحين
+  created_at timestamp
+}
+
+Table data-agreement {
+  id int [pk, increment]
+  provider_id int [not null]
+  scope jsonb [not null]
+  min_group_size int [not null]
+  starts date [not null]
+  ends date
+  created_at timestamp
+}
+
+Ref: provider-user.provider_id > provider.id
+Ref: service.provider_id > provider.id
+Ref: offering.service_id > service.id
+Ref: service-request.service_id > service.id
+Ref: service-request.core-farmer_id > core-farmer.id
+Ref: farm-report.core-farmer_id > core-farmer.id
+Ref: farm-report.core-farm_id > core-farm.id
+Ref: farm-report.core-crop_id > core-crop.id
+Ref: feedback.service-request_id > service-request.id
+Ref: region-dataset.provider_id > provider.id
+Ref: region-dataset.region_id > region.id
+Ref: core-farm.region_id > region.id
+Ref: insight.region-dataset_id > region-dataset.id
+Ref: insight.farm-report_id > farm-report.id
+Ref: insight.core-farmer_id > core-farmer.id
+Ref: aggregate.provider_id > provider.id
+Ref: data-agreement.provider_id > provider.id
+Ref: core-crop.core-farm_id > core-farm.id
+Ref: core-farm.core-farmer_id > core-farmer.id
