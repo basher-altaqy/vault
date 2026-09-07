@@ -27,7 +27,7 @@ generated: true
 - shared_with
 
 ## الإجراءات
-- رفع → [[S-farmer-insights|معلوماتي المخصصة (محصولي ومنطقتي)]] (يستدعي [[A-reports.create]])
+- رفع → [[S-farmer-insights|معلوماتي المخصصة (محصولي ومنطقتي)]] (يستدعي [[A-farm-reports.create]])
 
 ## الروابط
 -

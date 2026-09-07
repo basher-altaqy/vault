@@ -1,5 +1,5 @@
 ---
-id: "A-reports.create"
+id: "A-farm-reports.create"
 type: "api"
 title: "POST /farm-reports"
 domain: "api"

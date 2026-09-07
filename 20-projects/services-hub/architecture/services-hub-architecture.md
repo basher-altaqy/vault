@@ -51,12 +51,12 @@ date: 2026-09-07
 - 2026-09-07 · [[A-services.upsert|PUT /services/{id}]] · planned
 - 2026-09-07 · [[A-requests.update|PATCH /service-requests/{id}]] · planned
 - 2026-09-07 · [[A-requests.create|POST /service-requests]] · planned
-- 2026-09-07 · [[A-reports.create|POST /farm-reports]] · planned
 - 2026-09-07 · [[A-providers.create|POST /providers]] · planned
 - 2026-09-07 · [[A-providers.approve|POST /providers/{id}/approve]] · planned
 - 2026-09-07 · [[A-offerings.upsert|PUT /offerings/{id}]] · planned
 - 2026-09-07 · [[A-insights.create|POST /insights]] · planned
 - 2026-09-07 · [[A-feedback.create|POST /feedback]] · planned
+- 2026-09-07 · [[A-farm-reports.create|POST /farm-reports]] · planned
 - 2026-09-07 · [[A-datasets.upsert|PUT /region-datasets/{id}]] · planned
 - 2026-09-07 · [[A-core.sync|GET /core/{farmers|farms|crops}]] · planned
 - 2026-09-07 · [[A-aggregates.query|GET /aggregates]] · planned
