@@ -1,0 +1,5 @@
+{
+  "folder": "50-log",
+  "format": "YYYY-MM-DD",
+  "template": "90-templates/daily"
+}

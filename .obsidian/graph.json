@@ -1,0 +1,51 @@
+{
+  "collapse": false,
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "colorGroups": [
+    {
+      "query": "path:00-inbox",
+      "color": {
+        "a": 1,
+        "rgb": 3900138
+      }
+    },
+    {
+      "query": "type:decision",
+      "color": {
+        "a": 1,
+        "rgb": 2921024
+      }
+    },
+    {
+      "query": "type:constraint",
+      "color": {
+        "a": 1,
+        "rgb": 11015213
+      }
+    },
+    {
+      "query": "type:entity",
+      "color": {
+        "a": 1,
+        "rgb": 7175255
+      }
+    },
+    {
+      "query": "type:screen",
+      "color": {
+        "a": 1,
+        "rgb": 14913351
+      }
+    },
+    {
+      "query": "type:idea",
+      "color": {
+        "a": 1,
+        "rgb": 15448640
+      }
+    }
+  ]
+}

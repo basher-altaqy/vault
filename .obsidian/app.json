@@ -1,0 +1,13 @@
+{
+  "useMarkdownLinks": false,
+  "newLinkFormat": "shortest",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "00-inbox",
+  "attachmentFolderPath": "_attachments",
+  "showUnsupportedFiles": true,
+  "rightToLeft": true,
+  "readableLineLength": true,
+  "defaultViewMode": "preview",
+  "promptDelete": true,
+  "alwaysUpdateLinks": true
+}

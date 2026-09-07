@@ -1,0 +1,286 @@
+// generated from model.json (thamara)
+Table user {
+  id int [pk, increment]
+  name_ar varchar [not null] // كما في الهوية
+  name_en varchar
+  phone varchar [not null] // مرتبط بالهوية، OTP
+  email varchar [not null]
+  nationality varchar
+  birth_date date
+  birth_place varchar
+  verification varchar [not null] // unverified | verified | suspended
+  policy_signed_at timestamp [not null] // التوقيع الإلكتروني على السياسات
+  wallet_ref varchar // محفظة أو حساب بنكي
+  created_at timestamp
+}
+
+Table role {
+  id int [pk, increment]
+  user_id int [not null]
+  kind varchar [not null]
+  status varchar [not null]
+  created_at timestamp
+}
+
+Table farmer {
+  id int [pk, increment]
+  user_id int [not null]
+  tenure_types jsonb [not null] // ملك/إيجار/ضمان (قابلة للجمع)
+  id_document varchar // لشارة حساب موثق
+  created_at timestamp
+}
+
+Table trader {
+  id int [pk, increment]
+  user_id int [not null]
+  company_name varchar [not null]
+  company_email varchar [not null]
+  company_phone varchar [not null]
+  activity varchar [not null] // خضار/فواكه/حبوب
+  tax_number varchar [not null]
+  license_number varchar [not null]
+  hq_location point [not null]
+  commercial_register varchar [not null] // PDF
+  balance decimal [not null] // رصيد المزايدة
+  created_at timestamp
+}
+
+Table transporter {
+  id int [pk, increment]
+  user_id int [not null]
+  kind varchar [not null] // فردي/شركة
+  license_document varchar [not null]
+  coverage_areas jsonb [not null]
+  created_at timestamp
+}
+
+Table vehicle {
+  id int [pk, increment]
+  transporter_id int [not null]
+  capacity_kg int [not null]
+  model varchar [not null]
+  has_crane boolean
+  has_scale boolean
+  refrigerated boolean
+  created_at timestamp
+}
+
+Table officer {
+  id int [pk, increment]
+  user_id int [not null]
+  job_title varchar [not null]
+  ministry varchar [not null] // التجارة الداخلية/الزراعة/النقل
+  permissions jsonb [not null]
+  created_at timestamp
+}
+
+Table farm {
+  id int [pk, increment]
+  farmer_id int [not null]
+  name varchar [not null]
+  location point [not null] // خريطة تفاعلية
+  tenure varchar [not null]
+  packaging_methods jsonb [not null] // صناديق، وزن صافي
+  created_at timestamp
+}
+
+Table product {
+  id int [pk, increment]
+  name varchar [not null]
+  category varchar [not null]
+  units jsonb [not null]
+  quality_grades jsonb [not null]
+  created_at timestamp
+}
+
+Table crop {
+  id int [pk, increment]
+  farm_id int [not null]
+  product_id int [not null]
+  name varchar [not null]
+  variety varchar
+  quantity decimal [not null]
+  unit varchar [not null]
+  harvest_date date [not null]
+  expiry_date date
+  quality_grade varchar [not null]
+  size varchar
+  color varchar
+  photos jsonb [not null] // 1 إلى 10 صور
+  packaging jsonb [not null]
+  supply_range jsonb [not null]
+  created_at timestamp
+}
+
+Table listing {
+  id int [pk, increment]
+  crop_id int [not null]
+  kind varchar [not null]
+  title varchar [not null]
+  description text
+  status varchar [not null]
+  price_limit_id int // حد الوزارة المطبّق
+  created_at timestamp
+}
+
+Table auction {
+  id int [pk, increment]
+  listing_id int [not null]
+  start_price decimal [not null]
+  min_increment decimal [not null] // لا يقل عن حد النظام
+  duration_hours int [not null] // مثل 24
+  final_countdown_min int [not null] // يبدأ عند أول مزايدة
+  auto_extend_min int [not null] // تمديد عند مزايدة في آخر 5 دقائق
+  ends_at timestamp [not null]
+  winner_bid_id int
+  created_at timestamp
+}
+
+Table bid {
+  id int [pk, increment]
+  auction_id int [not null]
+  trader_id int [not null]
+  alias varchar [not null] // اسم مستعار حتى انتهاء المزاد
+  amount decimal [not null]
+  reserved_amount decimal [not null] // محجوز من الرصيد
+  placed_at timestamp [not null]
+  created_at timestamp
+}
+
+Table tender {
+  id int [pk, increment]
+  trader_id int [not null]
+  product_id int [not null]
+  quantity decimal [not null]
+  quality_grade varchar [not null]
+  price_cap decimal [not null]
+  pickup_at timestamp [not null]
+  pickup_location point [not null]
+  status varchar [not null]
+  created_at timestamp
+}
+
+Table offer {
+  id int [pk, increment]
+  tender_id int [not null]
+  farmer_id int [not null]
+  price decimal [not null]
+  quantity decimal [not null]
+  quality_grade varchar [not null]
+  ready_at timestamp [not null]
+  status varchar [not null]
+  created_at timestamp
+}
+
+Table order {
+  id int [pk, increment]
+  listing_id int
+  tender_id int
+  trader_id int [not null]
+  farmer_id int [not null]
+  crop_amount decimal [not null]
+  platform_fee decimal [not null]
+  transport_fee decimal
+  status varchar [not null] // created | paid | shipped | received | delivered | released | disputed
+  created_at timestamp
+}
+
+Table escrow {
+  id int [pk, increment]
+  order_id int [not null]
+  total decimal [not null]
+  bank_ref varchar // مرجع بوابة الدفع
+  receipt_confirmed_at timestamp
+  delivery_confirmed_at timestamp
+  released_at timestamp
+  created_at timestamp
+}
+
+Table shipment {
+  id int [pk, increment]
+  order_id int [not null]
+  transporter_id int
+  vehicle_id int
+  agreed_fee decimal
+  status varchar [not null]
+  created_at timestamp
+}
+
+Table price-limit {
+  id int [pk, increment]
+  product_id int [not null]
+  min_price decimal
+  max_price decimal
+  valid_from date [not null]
+  source varchar [not null]
+  created_at timestamp
+}
+
+Table blacklist {
+  id int [pk, increment]
+  user_id int [not null]
+  reason text [not null]
+  report_id int
+  since date [not null]
+  created_at timestamp
+}
+
+Table report {
+  id int [pk, increment]
+  reporter_id int [not null]
+  kind varchar [not null] // رسائل مزعجة/احتيال/نصب/محتوى غير لائق/تخلف عن الدفع أو الاستلام
+  title varchar [not null]
+  description text [not null]
+  attachments jsonb
+  conversation_ref varchar
+  ref_number varchar [not null]
+  status varchar [not null]
+  created_at timestamp
+}
+
+Table ticket {
+  id int [pk, increment]
+  user_id int [not null]
+  title varchar [not null]
+  category varchar [not null]
+  priority varchar [not null]
+  ref_number varchar [not null]
+  status varchar [not null] // قيد المراجعة/قيد المعالجة/تم الحل
+  created_at timestamp
+}
+
+Table notification {
+  id int [pk, increment]
+  user_id int [not null]
+  kind varchar [not null]
+  payload jsonb [not null]
+  read_at timestamp
+  created_at timestamp
+}
+
+Ref: role.user_id > user.id
+Ref: farmer.user_id > user.id
+Ref: trader.user_id > user.id
+Ref: transporter.user_id > user.id
+Ref: officer.user_id > user.id
+Ref: farm.farmer_id > farmer.id
+Ref: crop.farm_id > farm.id
+Ref: crop.product_id > product.id
+Ref: listing.crop_id > crop.id
+Ref: auction.listing_id > listing.id
+Ref: bid.auction_id > auction.id
+Ref: bid.trader_id > trader.id
+Ref: tender.trader_id > trader.id
+Ref: offer.tender_id > tender.id
+Ref: offer.farmer_id > farmer.id
+Ref: order.trader_id > trader.id
+Ref: order.farmer_id > farmer.id
+Ref: escrow.order_id > order.id
+Ref: shipment.order_id > order.id
+Ref: shipment.transporter_id > transporter.id
+Ref: vehicle.transporter_id > transporter.id
+Ref: price-limit.product_id > product.id
+Ref: report.user_id > user.id
+Ref: ticket.user_id > user.id
+Ref: blacklist.user_id > user.id
+Ref: notification.user_id > user.id
