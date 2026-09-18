@@ -8,7 +8,7 @@ related: ["[[E-escrow]]", "[[S-trader-confirm-receipt]]"]
 source: "model"
 status: "planned"
 project: "thamara"
-date: 2026-09-07
+date: 2026-09-18
 generated: true
 ---
 # POST /orders/{id}/escrow/confirm-receipt

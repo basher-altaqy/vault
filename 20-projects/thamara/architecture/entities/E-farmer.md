@@ -8,7 +8,7 @@ related: ["[[E-user]]", "[[E-farm]]", "[[E-offer]]", "[[E-order]]", "[[S-farmer-
 source: "model"
 project: "thamara"
 status: "generated"
-date: 2026-09-07
+date: 2026-09-18
 generated: true
 ---
 # مزارع

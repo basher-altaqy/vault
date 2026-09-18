@@ -8,7 +8,7 @@ related: ["[[E-user]]", "[[E-shipment]]", "[[E-vehicle]]", "[[S-transporter-regi
 source: "model"
 project: "thamara"
 status: "generated"
-date: 2026-09-07
+date: 2026-09-18
 generated: true
 ---
 # ناقل

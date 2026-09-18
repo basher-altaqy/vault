@@ -3,7 +3,7 @@ type: index
 title: "الكيانات والعلاقات"
 project: thamara
 status: generated
-date: 2026-09-07
+date: 2026-09-18
 ---
 # الكيانات والعلاقات
 <!-- generated from model.json — لا تعدّل يدوياً -->

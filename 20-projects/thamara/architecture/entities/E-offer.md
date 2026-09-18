@@ -8,7 +8,7 @@ related: ["[[E-tender]]", "[[E-farmer]]", "[[S-farmer-offer-submit]]", "[[S-trad
 source: "model"
 project: "thamara"
 status: "generated"
-date: 2026-09-07
+date: 2026-09-18
 generated: true
 ---
 # عرض على مناقصة

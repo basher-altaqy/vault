@@ -3,7 +3,7 @@ type: index
 title: "تدفق شاشات all"
 project: thamara
 status: generated
-date: 2026-09-07
+date: 2026-09-18
 ---
 # تدفق شاشات all
 <!-- generated from model.json — لا تعدّل يدوياً -->

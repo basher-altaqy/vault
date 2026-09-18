@@ -8,7 +8,7 @@ related: ["[[E-blacklist]]", "[[S-admin-reports]]"]
 source: "model"
 status: "planned"
 project: "thamara"
-date: 2026-09-07
+date: 2026-09-18
 generated: true
 ---
 # POST /blacklist

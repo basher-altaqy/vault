@@ -8,7 +8,7 @@ related: ["[[E-order]]", "[[E-transporter]]", "[[S-trader-transport-choose]]", "
 source: "model"
 project: "thamara"
 status: "generated"
-date: 2026-09-07
+date: 2026-09-18
 generated: true
 ---
 # شحنة

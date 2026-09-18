@@ -8,7 +8,7 @@ related: ["[[E-report]]", "[[S-report-create]]"]
 source: "model"
 status: "planned"
 project: "thamara"
-date: 2026-09-07
+date: 2026-09-18
 generated: true
 ---
 # POST /reports

@@ -8,7 +8,7 @@ related: ["[[E-price-limit]]", "[[S-admin-price-limits]]"]
 source: "model"
 status: "planned"
 project: "thamara"
-date: 2026-09-07
+date: 2026-09-18
 generated: true
 ---
 # PUT /price-limits

@@ -8,7 +8,7 @@ related: ["[[E-order]]", "[[S-admin-escrow]]", "[[S-trader-checkout]]", "[[S-tra
 source: "model"
 project: "thamara"
 status: "generated"
-date: 2026-09-07
+date: 2026-09-18
 generated: true
 ---
 # حساب ضمان

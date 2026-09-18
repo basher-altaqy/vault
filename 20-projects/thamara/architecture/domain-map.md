@@ -3,7 +3,7 @@ type: index
 title: "الخريطة المختصرة للكيانات"
 project: thamara
 status: generated
-date: 2026-09-07
+date: 2026-09-18
 ---
 # الخريطة المختصرة للكيانات
 <!-- generated from model.json — لا تعدّل يدوياً -->

@@ -8,7 +8,7 @@ related: ["[[E-crop]]", "[[E-price-limit]]", "[[S-admin-catalog]]"]
 source: "model"
 project: "thamara"
 status: "generated"
-date: 2026-09-07
+date: 2026-09-18
 generated: true
 ---
 # منتج (صنف)
